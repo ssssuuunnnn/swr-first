@@ -16,7 +16,6 @@ async function fetchUsers(url: string): Promise<ApiUser[]> {
 
 const { data, error, isValidating, mutate } = useSWRV<ApiUser[]>(API_URL, fetchUsers, {
   ttl: 2000,
-  refreshInterval: 2000,
 })
 
 function formatDate(value: string): string {
